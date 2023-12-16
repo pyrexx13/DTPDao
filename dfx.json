@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "dtp_backend": {
+      "main": "src/dtp_backend/main.mo",
+      "type": "motoko"
+    },
+    "dtp_frontend": {
+      "dependencies": [
+        "dtp_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dtp_frontend/src/index.html"
+      },
+      "source": [
+        "src/dtp_frontend/assets",
+        "dist/dtp_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
